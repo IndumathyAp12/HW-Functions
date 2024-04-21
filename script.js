@@ -90,6 +90,37 @@ console.log(inputarr)
 let age1 = inputarr.filter((ageofPerson) => ageofPerson.age < 50 );
 console.log(age1);
 //Map the array to change the “occupation” key to “job” and increment every age by 1.
-const resultArray = inputarr.map(elm => ({ job: elm.occupation}));
-console.log(resultArray)
+function rename() { 
+    inputarr = inputarr.map(function (obj) {
+ 
+       
+        obj['job'] = obj['occupation']; 
+        delete obj['occupation']; 
+       
+ 
+        return obj;
+    });
+    console.log(inputarr);
+}
+ 
+rename();
+// const newArray = new inputarr()
+// map.set('age', {val: 1})
+// map.get('age').val++
+// console.log(newArray)
 
+// inputarr.map(elem => elem["age"] += 1);
+// console.log(inputarr)
+// inputarr_static=inputarr;
+// inputarr.map((inputarr, index) => Object.assign({}, inputarr, { age: index + 1 }))
+// console.log(inputarr)
+// let resultArray = new inputarr ();
+// resultArray.set('age', resultArray.get('age') + 1);
+// console.log(resultArray)
+// function myFunction(age) {
+//     return age +=1;
+//   }
+//   console.log(inputarr)
+
+//Use the reduce method to calculate the sum of the ages.
+//Then use the result to calculate the average age.
