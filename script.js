@@ -68,3 +68,35 @@ function printRecursiveNum(num,curVal) {
   
 const num = 5; 
 printRecursiveNum(num,1);
+
+//Part 2: Thinking Methodically
+//Sort the array by age.
+let inputarr = 
+[{ id: "42", name: "Bruce", occupation: "Knight", age: "41" },
+ { id: "48", name: "Barry", occupation: "Runner", age: "25" },
+ { id: "57", name: "Bob", occupation: "Fry Cook", age: "19" },
+ { id: "63", name: "Blaine", occupation: "Quiz Master", age: "58" },
+ { id: "7", name: "Bilbo", occupation: "None", age: "111" }];
+
+ inputarr.sort(
+    function(a, b) {
+       return a.age - b.age
+    }
+);
+console.log(inputarr)
+
+//Filter the array to remove entries with an age greater than 50.
+let filteredArray = []
+
+function filterByage(item) {
+    if (arrByage.isFinite(item.id) && item.id > 50) {
+      return true;
+    }
+    invalidEntries++;
+    return false;
+  }
+
+
+const arrByage = inputarr.filter(filterByage);
+
+console.log( arrByage);
