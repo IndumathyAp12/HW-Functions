@@ -86,17 +86,10 @@ let inputarr =
 console.log(inputarr)
 
 //Filter the array to remove entries with an age greater than 50.
-let filteredArray = []
 
-function filterByage(item) {
-    if (arrByage.isFinite(item.id) && item.id > 50) {
-      return true;
-    }
-    invalidEntries++;
-    return false;
-  }
+let age1 = inputarr.filter((ageofPerson) => ageofPerson.age < 50 );
+console.log(age1);
+//Map the array to change the “occupation” key to “job” and increment every age by 1.
+const resultArray = inputarr.map(elm => ({ job: elm.occupation}));
+console.log(resultArray)
 
-
-const arrByage = inputarr.filter(filterByage);
-
-console.log( arrByage);
